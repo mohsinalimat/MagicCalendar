@@ -161,7 +161,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Eur = 68. Rub" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7M-YN-GH6">
-                                <rect key="frame" x="43" y="266" width="205" height="36"/>
+                                <rect key="frame" x="40" y="266" width="205" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -183,7 +183,7 @@
                             <constraint firstAttribute="centerX" secondItem="Q6o-z5-RC0" secondAttribute="centerX" id="j8c-pv-sLO"/>
                             <constraint firstAttribute="centerX" secondItem="h7M-YN-GH6" secondAttribute="centerX" id="kxr-xT-puL"/>
                             <constraint firstAttribute="centerY" secondItem="h7M-YN-GH6" secondAttribute="centerY" id="mek-mu-MRQ"/>
-                            <constraint firstItem="h7M-YN-GH6" firstAttribute="leading" secondItem="Q6o-z5-RC0" secondAttribute="leading" constant="3" id="zwn-dO-aiX"/>
+                            <constraint firstItem="h7M-YN-GH6" firstAttribute="leading" secondItem="Q6o-z5-RC0" secondAttribute="leading" id="zwn-dO-aiX"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
