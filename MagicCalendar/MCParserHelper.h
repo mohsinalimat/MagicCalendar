@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+static NSString *kValCurs = @"ValCurs";
+static NSString *kCharCode = @"CharCode";
+static NSString *kValue = @"Value";
+static NSString *kValute = @"Valute";
 
 @interface MCParserHelper : NSObject
+- (NSArray*) getCurrencyItemsForData:(NSData*) data;
 
 @end

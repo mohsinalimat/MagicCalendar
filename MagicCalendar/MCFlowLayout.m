@@ -13,7 +13,6 @@
 {
     CGSize collectionViewSize = self.collectionView.bounds.size;
     CGFloat proposedContentOffsetCenterY = proposedContentOffset.y + self.collectionView.bounds.size.height * 0.5f;
-
     CGRect proposedRect = CGRectMake(0.0, proposedContentOffset.y, collectionViewSize.width, collectionViewSize.height);
     
     UICollectionViewLayoutAttributes* candidateAttributes;

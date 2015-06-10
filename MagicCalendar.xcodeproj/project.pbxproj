@@ -17,6 +17,8 @@
 		B221F1331B26F82400746732 /* MCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B221F1321B26F82400746732 /* MCDetailViewController.m */; };
 		B221F13A1B278CD200746732 /* MCCalendarCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B221F1391B278CD200746732 /* MCCalendarCollectionViewCell.m */; };
 		B2374A321B279FA8006CC7CD /* MCFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B2374A311B279FA8006CC7CD /* MCFlowLayout.m */; };
+		B2374A361B285A7A006CC7CD /* MCDownloadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2374A351B285A7A006CC7CD /* MCDownloadHelper.m */; };
+		B2374A3F1B28752B006CC7CD /* MCParserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2374A3E1B28752B006CC7CD /* MCParserHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		B221F1391B278CD200746732 /* MCCalendarCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCalendarCollectionViewCell.m; sourceTree = "<group>"; };
 		B2374A301B279FA8006CC7CD /* MCFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCFlowLayout.h; sourceTree = "<group>"; };
 		B2374A311B279FA8006CC7CD /* MCFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCFlowLayout.m; sourceTree = "<group>"; };
+		B2374A341B285A7A006CC7CD /* MCDownloadHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDownloadHelper.h; sourceTree = "<group>"; };
+		B2374A351B285A7A006CC7CD /* MCDownloadHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDownloadHelper.m; sourceTree = "<group>"; };
+		B2374A3D1B28752B006CC7CD /* MCParserHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCParserHelper.h; sourceTree = "<group>"; };
+		B2374A3E1B28752B006CC7CD /* MCParserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCParserHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 		B221F10A1B26F33800746732 /* MagicCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				B2374A331B285A69006CC7CD /* Helpers */,
 				B221F1341B26F82A00746732 /* View Controllers */,
 				B221F1151B26F33800746732 /* Main.storyboard */,
 				B221F10B1B26F33800746732 /* Supporting Files */,
@@ -140,6 +147,17 @@
 				B2374A311B279FA8006CC7CD /* MCFlowLayout.m */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B2374A331B285A69006CC7CD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B2374A341B285A7A006CC7CD /* MCDownloadHelper.h */,
+				B2374A351B285A7A006CC7CD /* MCDownloadHelper.m */,
+				B2374A3D1B28752B006CC7CD /* MCParserHelper.h */,
+				B2374A3E1B28752B006CC7CD /* MCParserHelper.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,11 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2374A3F1B28752B006CC7CD /* MCParserHelper.m in Sources */,
 				B221F1141B26F33800746732 /* ViewController.m in Sources */,
 				B221F1331B26F82400746732 /* MCDetailViewController.m in Sources */,
 				B221F13A1B278CD200746732 /* MCCalendarCollectionViewCell.m in Sources */,
 				B221F1111B26F33800746732 /* AppDelegate.m in Sources */,
 				B221F10E1B26F33800746732 /* main.m in Sources */,
+				B2374A361B285A7A006CC7CD /* MCDownloadHelper.m in Sources */,
 				B2374A321B279FA8006CC7CD /* MCFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
