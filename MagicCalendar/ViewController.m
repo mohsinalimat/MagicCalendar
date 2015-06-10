@@ -10,7 +10,7 @@
 #import "MCDetailViewController.h"
 #import "MCCalendarCollectionViewCell.h"
 
-static const NSUInteger kTotalDays = 366;
+static const NSUInteger kTotalDays = 3655;
 static const NSTimeInterval kSecondsInDay = 60 * 60 * 24;
 
 @interface ViewController () <UICollectionViewDataSource>
@@ -54,6 +54,11 @@ static const NSTimeInterval kSecondsInDay = 60 * 60 * 24;
     if (!_isAlreadyScrolled)
     {
         _isAlreadyScrolled = YES;
+        
+        CGFloat collectionViewHeight = CGRectGetHeight(self.collectionView.bounds);
+        [self.collectionView setContentInset:
+                UIEdgeInsetsMake(collectionViewHeight/2, 0, collectionViewHeight/2, 0)];
+        
         NSInteger currentDateRow = [self rowForDate:[NSDate date]];
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:currentDateRow inSection:0];
         [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated: NO];
