@@ -26,7 +26,9 @@ static const NSString *kSBRFURL = @"http://cbr.ru/scripts/XML_daily.asp?";
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setDateFormat:@"d MMMM YYYY"];
     self.dateLabel.text = [dateFormatter stringFromDate:self.targetDate];
-    [self startDownloading];
+    
+    if ([self.targetDate compare:[NSDate date]] == NSOrderedAscending)
+        [self startDownloading];
 }
 - (void) viewWillAppear:(BOOL)animated
 {
@@ -36,6 +38,8 @@ static const NSString *kSBRFURL = @"http://cbr.ru/scripts/XML_daily.asp?";
 
 - (void) setCurrencyWithInfo:(NSArray *)items
 {
+    if (!items.count) return;
+    
     __block NSString *euroValue;
     __block NSString *dollarValue;
     [items enumerateObjectsUsingBlock:^(NSDictionary *contentDict, NSUInteger idx, BOOL *stop) {
@@ -49,8 +53,10 @@ static const NSString *kSBRFURL = @"http://cbr.ru/scripts/XML_daily.asp?";
         }
     }];
 
-    self.euroLabel.text = [NSString stringWithFormat:@"1 Eur = %@ Rub",euroValue];
-    self.dollarLabel.text = [NSString stringWithFormat:@"1$ = %@ Rub",dollarValue];
+    if (euroValue.length)
+        self.euroLabel.text = [NSString stringWithFormat:@"1 Eur = %@ Rub", euroValue];
+    if (dollarValue.length)
+        self.dollarLabel.text = [NSString stringWithFormat:@"1$ = %@ Rub", dollarValue];
 
     [UIView animateWithDuration:.2 animations:^{
         self.euroLabel.alpha = 1;

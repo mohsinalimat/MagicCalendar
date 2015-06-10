@@ -45,6 +45,10 @@
 {
     if ([elementName isEqualToString:kValute])
     {
+        //Cuttin float value
+        NSRange range = NSMakeRange(_value.length-2, 2);
+        [_value replaceCharactersInRange:range withString:@""];
+        
         NSDictionary *dataDictionary = [NSDictionary dictionaryWithObjects:@[_charCode, _value] forKeys:@[kCharCode, kValue]];
         [_items addObject:dataDictionary];
     }

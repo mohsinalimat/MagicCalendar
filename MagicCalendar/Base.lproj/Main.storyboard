@@ -155,33 +155,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 января 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6o-z5-RC0" userLabel="21 января 2015">
-                                <rect key="frame" x="72" y="169" width="176" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <rect key="frame" x="40" y="160" width="211" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Eur = 68. Rub" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7M-YN-GH6">
-                                <rect key="frame" x="75" y="269" width="171" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <rect key="frame" x="43" y="266" width="205" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1$ = 68. Rub" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mk8-ZN-2XK" userLabel="1$ = 68. Rub">
-                                <rect key="frame" x="90" y="369" width="141" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <rect key="frame" x="40" y="372" width="169" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Q6o-z5-RC0" firstAttribute="leading" secondItem="AZQ-Lu-UM4" secondAttribute="leading" constant="40" id="DWn-w1-GyY"/>
                             <constraint firstAttribute="centerX" secondItem="mk8-ZN-2XK" secondAttribute="centerX" id="JiJ-kF-aM1"/>
+                            <constraint firstItem="mk8-ZN-2XK" firstAttribute="leading" secondItem="Q6o-z5-RC0" secondAttribute="leading" id="PLn-JP-OIF"/>
                             <constraint firstItem="h7M-YN-GH6" firstAttribute="top" secondItem="Q6o-z5-RC0" secondAttribute="bottom" constant="70" id="dEF-D5-MNp"/>
                             <constraint firstItem="mk8-ZN-2XK" firstAttribute="top" secondItem="h7M-YN-GH6" secondAttribute="bottom" constant="70" id="gOn-na-jrj"/>
                             <constraint firstAttribute="centerX" secondItem="Q6o-z5-RC0" secondAttribute="centerX" id="j8c-pv-sLO"/>
                             <constraint firstAttribute="centerX" secondItem="h7M-YN-GH6" secondAttribute="centerX" id="kxr-xT-puL"/>
                             <constraint firstAttribute="centerY" secondItem="h7M-YN-GH6" secondAttribute="centerY" id="mek-mu-MRQ"/>
+                            <constraint firstItem="h7M-YN-GH6" firstAttribute="leading" secondItem="Q6o-z5-RC0" secondAttribute="leading" constant="3" id="zwn-dO-aiX"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="j8c-pv-sLO"/>
+                                <exclude reference="kxr-xT-puL"/>
+                                <exclude reference="JiJ-kF-aM1"/>
+                            </mask>
+                        </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
