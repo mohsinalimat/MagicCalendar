@@ -10,7 +10,7 @@
 #import "MCParserHelper.h"
 
 static const NSString *kSBRFURL = @"http://cbr.ru/scripts/XML_daily.asp?";
-@interface MCDetailViewController ()<NSXMLParserDelegate>
+@interface MCDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *euroLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dollarLabel;
@@ -53,15 +53,18 @@ static const NSString *kSBRFURL = @"http://cbr.ru/scripts/XML_daily.asp?";
         }
     }];
 
-    if (euroValue.length)
-        self.euroLabel.text = [NSString stringWithFormat:@"1 Eur = %@ Rub", euroValue];
-    if (dollarValue.length)
-        self.dollarLabel.text = [NSString stringWithFormat:@"1$ = %@ Rub", dollarValue];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        if (euroValue.length)
+            self.euroLabel.text = [NSString stringWithFormat:@"1 Eur = %@ Rub", euroValue];
+        if (dollarValue.length)
+            self.dollarLabel.text = [NSString stringWithFormat:@"1$ = %@ Rub", dollarValue];
 
-    [UIView animateWithDuration:.2 animations:^{
-        self.euroLabel.alpha = 1;
-        self.dollarLabel.alpha = 1;
-    }];
+        [UIView animateWithDuration:.2 animations:^{
+            self.euroLabel.alpha = 1;
+            self.dollarLabel.alpha = 1;
+        }];
+    });
 }
 #pragma mark -=Downloading=-
 - (void) startDownloading

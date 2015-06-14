@@ -10,7 +10,7 @@
 #import "MCDetailViewController.h"
 #import "MCCalendarCollectionViewCell.h"
 
-static const NSUInteger kTotalDays = 3655;
+static const NSUInteger kTotalDays = 3653;
 static const NSTimeInterval kSecondsInDay = 60 * 60 * 24;
 
 @interface ViewController () <UICollectionViewDataSource>
